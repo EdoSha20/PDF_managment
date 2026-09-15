@@ -1,3 +1,59 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+
+body {
+
+	margin: 0;
+
+	background: #f3f4f6;
+
+	color: #111827;
+
+}
+ 
+table {
+
+	width: 100%;
+
+	border-collapse: collapse;
+
+}
+ 
+th,
+
+td {
+
+	padding: 12px;
+
+	text-align: left;
+
+	border-bottom: 1px solid #e5e7eb;
+
+}
+ 
+.error {
+
+	padding: 12px;
+
+	margin-bottom: 16px;
+
+	background: #fee2e2;
+
+	border-radius: 8px;
+
+}
+ 
+.success {
+
+	padding: 12px;
+
+	margin-bottom: 16px;
+
+	background: #dcfce7;
+
+	border-radius: 8px;
+
+}
+ 
