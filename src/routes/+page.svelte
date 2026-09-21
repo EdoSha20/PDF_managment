@@ -134,4 +134,12 @@
 	</a>
 </section>
 	</div>
+
+	<footer class="mt-10 border-t border-stone-300/70 py-6 text-center">
+	<p class="text-sm text-stone-500">
+		© 2026 PDF Manager
+	</p>
+</footer>
+
+	
 </main>
