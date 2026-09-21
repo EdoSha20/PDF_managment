@@ -1,3 +1,6 @@
+<script>
+	let { data } = $props();
+</script>
 <svelte:head>
 	<title>PDF Manager</title>
 	<meta
@@ -20,12 +23,40 @@
 				</p>
 			</div>
 
-			<a
-				href="/login"
+			{#if data.user}
+
+	<div class="flex items-center gap-3">
+
+		<div class="text-right">
+			<p class="text-sm font-medium text-stone-800">
+				{data.user.username}
+			</p>
+
+			<p class="text-xs capitalize text-stone-500">
+				{data.user.role}
+			</p>
+		</div>
+
+		<form method="POST" action="/logout">
+			<button
 				class="rounded-full border border-stone-300 bg-white/60 px-5 py-2.5 text-sm font-medium text-stone-700 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-stone-950"
 			>
-				Login
-			</a>
+				Logout
+			</button>
+		</form>
+
+	</div>
+
+{:else}
+
+	<a
+		href="/login"
+		class="rounded-full border border-stone-300 bg-white/60 px-5 py-2.5 text-sm font-medium text-stone-700 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-stone-950"
+	>
+		Login
+	</a>
+
+{/if}
 		</nav>
 
 		<section class="py-20 lg:py-28">
